@@ -8,8 +8,8 @@ Pentesting Report:
 1. WordPress => 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
  Summary:
 Vulnerability types: XSS,
-Tested in version: <= 4.2.3,
-Fixed in version: 4.2,
+Tested in version: <= 4.2,
+Fixed in version: 4.2.3,
  
 GIF Walkthrough:
 ![vulnerability xss](https://user-images.githubusercontent.com/42792775/47959227-b34bd980-dfb4-11e8-9a74-9c105750565e.gif)
@@ -21,8 +21,8 @@ Publish it, then view the post.
 2. WordPress =>4.2 - Authenticated Stored Cross-Site Scripting (XSS) via Image frame Summary
  Summary:
 Vulnerability types: XSS,
-Tested in version: 4.2.1,
-Fixed in version: 4.2,
+Tested in version: 4.2,
+Fixed in version: 4.2.1,
 GIF Walkthrough: 
 
 ![vulnerability2 xss](https://user-images.githubusercontent.com/42792775/47959240-06259100-dfb5-11e8-8131-09b369f8e930.gif)
