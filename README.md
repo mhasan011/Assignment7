@@ -45,6 +45,11 @@ Steps to recreate:
 Enter "admin" as username and type random password.
 Enter "different name" as username and type "admin" as password.
 
+
+
+
+
+
 Assets
 
 List any additional assets, such as scripts or files
