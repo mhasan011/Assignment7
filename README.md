@@ -7,9 +7,9 @@ Objective: Find, analyze, recreate, and document 3 vulnerabilities affecting an 
 Pentesting Report:
 1. WordPress => 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
  Summary:
-Vulnerability types: XSS
-Tested in version: <= 4.2.3
-Fixed in version: 4.2
+Vulnerability types: XSS,
+Tested in version: <= 4.2.3,
+Fixed in version: 4.2,
  
 GIF Walkthrough:
 ![vulnerability xss](https://user-images.githubusercontent.com/42792775/47959227-b34bd980-dfb4-11e8-9a74-9c105750565e.gif)
@@ -20,9 +20,9 @@ Publish it, then view the post.
 
 2. WordPress =>4.2 - Authenticated Stored Cross-Site Scripting (XSS) via Image frame Summary
  Summary:
-Vulnerability types: XSS
-Tested in version: 4.2.1
-Fixed in version: 4.2
+Vulnerability types: XSS,
+Tested in version: 4.2.1,
+Fixed in version: 4.2,
 GIF Walkthrough: 
 
 ![vulnerability2 xss](https://user-images.githubusercontent.com/42792775/47959240-06259100-dfb5-11e8-8131-09b369f8e930.gif)
@@ -34,29 +34,33 @@ Steps to recreate:
 
 3. WordPress => 4.2 - User Authentication
  Summary:
-Vulnerability types: user authentication
-Fixed in version: 4.2
+Vulnerability types: user authentication,
+Fixed in version: 4.2,
  GIF Walkthrough: 
  
  ![vulnerability3](https://user-images.githubusercontent.com/42792775/47959247-3d943d80-dfb5-11e8-9957-ed055526c7e8.gif)
 
 
 Steps to recreate:
-Enter "admin" as username and type random password
-Enter "different name" as username and type "admin" as password
+Enter "admin" as username and type random password.
+Enter "different name" as username and type "admin" as password.
 
 Assets
+
 List any additional assets, such as scripts or files
 
 Resources
+
 WordPress Source Browser
 WordPress Developer Reference
 GIFs created with LiceCap.
 
 Notes
+
 Took some time to figure out how to appraoch.
 
 License
+
 Copyright [2018] [Mahmudul Hasan]
 
 Licensed under the Apache License, Version 2.0 (the "License");
