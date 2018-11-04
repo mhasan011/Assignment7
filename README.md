@@ -1,11 +1,11 @@
 Project 7 - WordPress Pentesting
 
-Time spent: 4 hours spent in total
+Time spent: 5 hours spent in total
 
 Objective: Find, analyze, recreate, and document 3 vulnerabilities affecting an old version of WordPress
 
 Pentesting Report:
-1. WordPress <= 4.2.2 - Authenticated Stored Cross-Site Scripting (XSS)
+1. WordPress => 4.2 - Authenticated Stored Cross-Site Scripting (XSS)
  Summary:
 Vulnerability types: XSS
 Tested in version: <= 4.2.3
@@ -14,36 +14,36 @@ Fixed in version: 4.2
 GIF Walkthrough:
 ![vulnerability xss](https://user-images.githubusercontent.com/42792775/47959227-b34bd980-dfb4-11e8-9a74-9c105750565e.gif)
 Steps to recreate:
-"Social engineer" the administrator to give you posting privileges (Author/Contributor role)
-Exploit WordPress HTML processing by XSSing inside a post with the following code excerpt:
-<a href="[caption code=">]</a><a title=" onmouseover=alert('hacked!!!')  ">link</a>
+Make a new post
+Write the javascript "<SCRIPT>alert('XSS')</SCRIPT>" in lower case.
+Publish it, then view the post.
 
-2. WordPress 4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in YouTube URL Embeds (ID: 8768)
+2. WordPress =>4.2 - Authenticated Stored Cross-Site Scripting (XSS) via Image frame Summary
  Summary:
 Vulnerability types: XSS
-Tested in version: 4.0-4.7.2
-Fixed in version: 4.7.3
+Tested in version: 4.2.1
+Fixed in version: 4.2
 GIF Walkthrough: 
 
 ![vulnerability2 xss](https://user-images.githubusercontent.com/42792775/47959240-06259100-dfb5-11e8-8131-09b369f8e930.gif)
 
 Steps to recreate:
-"Social engineer" the administrator to give you posting privileges (Author/Contributor role)
-Exploit WordPress vulnerability to sneak XSS code into YouTube embed shortcode
-[embed src='https://youtube.com/embed/12345\x3csvg onload=alert(12345)\x3e'][/embed]
+ Add a new image in library. 
+ Then go to library and click on that image. 
+ In the title section, add the javascript "<img src= a onerror=alert(1)>.png" right next to the image name.
 
-WordPress <= 4.2 - Unauthenticated Stored Cross-Site Scripting (XSS) (ID: 7945)
+3. WordPress => 4.2 - User Authentication
  Summary:
-Vulnerability types: XSS
-Tested in version: <= 4.2
-Fixed in version: 4.2.1
+Vulnerability types: user authentication
+Fixed in version: 4.2
  GIF Walkthrough: 
  
  ![vulnerability3](https://user-images.githubusercontent.com/42792775/47959247-3d943d80-dfb5-11e8-9957-ed055526c7e8.gif)
 
 
 Steps to recreate:
-Comment an XSS code excerpt that exceeds 64kb
+Enter "admin" as username and type random password
+Enter "different name" as username and type "admin" as password
 
 Assets
 List any additional assets, such as scripts or files
@@ -54,10 +54,10 @@ WordPress Developer Reference
 GIFs created with LiceCap.
 
 Notes
-Describe any challenges encountered while doing the work
+Took some time to figure out how to appraoch.
 
 License
-Copyright [yyyy] [name of copyright owner]
+Copyright [2018] [Mahmudul Hasan]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
